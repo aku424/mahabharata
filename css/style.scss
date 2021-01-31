@@ -944,3 +944,102 @@ footer{
     flex-direction: row-reverse;
     text-align: right;
 }
+/*====================================================================
+                    
+====================================================================*/
+                    //stroy
+/*====================================================================
+                    
+====================================================================*/
+.bg__bk{
+    background-color:#000;
+}
+.story-top-bg{
+    background-image: url(../img/story1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    .bg__bk__tra{
+        background: linear-gradient(to left, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.1));
+    }
+    .util-top{
+        background-image: none;
+    }
+    
+}
+.story-area{
+    color: $c-white;
+    .section-title{
+        margin-bottom: 24px;
+        @include mq(sm){
+            margin-bottom: 15px;
+
+        }
+    }
+}
+.story-txt-area{
+    color: $c-white;
+    p{
+        width: calc(100% /2);
+        padding: 60px 0;
+        @include mq(sm){
+            width: 100%;
+            font-size: $fz-s;
+            padding: 30px 0;
+        }
+    }
+}
+.story-main{
+    .story-txt-area{
+        @include mq(sm){
+            background-position: center;
+            background-size: cover;
+            
+        }
+    }
+}
+.story-txt__left{
+    .bg__bk__tra{
+        background: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.1));
+    }
+    p{
+        padding-right: 30px;
+        margin-right: auto;
+        @include mq(sm){
+            padding-right: 0;
+        }
+    }
+}
+.story-txt__right{
+    .bg__bk__tra{
+        background: linear-gradient(to left, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.1));
+    }
+    p{
+        padding-left: 30px;
+        margin-left: auto;
+        z-index: 100;
+        @include mq(sm){
+            padding-left: 0;
+        }
+    }
+}
+.story-1{
+    background-position: 100% 0;
+    background-image: url(../img/story05.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    
+}
+.story-2{
+    background-position: 0 50%;
+    background-image: url(../img/story04.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+.story-3{
+    background-position: 100% 50%;
+    background-image: url(../img/story3.png);
+    background-size:50% ;
+    background-repeat: no-repeat;
+
+}
