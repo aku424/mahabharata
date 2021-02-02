@@ -530,22 +530,22 @@ header
 /*====================================================================
                     comments
 ====================================================================*/
-.index-comments {
+.comments {
   padding: 60px 0;
 }
 
-.index-comments .section-title {
-  margin-bottom: 40px;
+.comments .section-title {
+  margin-bottom: 30px;
 }
 
-.index-comments-title-sub {
+.comments-title-sub {
   margin-bottom: 30px;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
 }
 
-.index-comments-box {
+.comments-box {
   width: 100%;
   padding: 50px 30px;
   color: #fff;
@@ -556,17 +556,17 @@ header
   margin-bottom: 70px;
 }
 
-.index-comments-box-title {
+.comments-box-title {
   font-size: 20px;
   font-size: 600;
   margin-bottom: 10px;
 }
 
-.index-comments-box-title span {
+.comments-box-title span {
   font-size: 26px;
 }
 
-.index-comments-text {
+.comments-text {
   font-size: 14px;
   width: 420px;
 }
@@ -1360,4 +1360,82 @@ footer {
   background-image: url(../img/story3.png);
   background-size: 50%;
   background-repeat: no-repeat;
+}
+
+/*====================================================================
+                    
+====================================================================*/
+/*====================================================================
+                    
+====================================================================*/
+.c-main .comments {
+  padding: 27px 0;
+}
+
+.c-main .comments .section-title {
+  margin-bottom: 24px;
+}
+
+.c-main .comments .comments-box {
+  margin-bottom: 0;
+}
+
+.c-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 900px) {
+  .c-items {
+    justify-content: space-around;
+  }
+}
+
+.c-item {
+  flex: 0 0 250px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .c-item {
+    flex: 0 0 200px;
+    margin-bottom: 15px;
+  }
+}
+
+.c-item__title {
+  text-align: center;
+}
+
+.c-item__name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .c-item__name {
+    font-size: 18px;
+  }
+}
+
+.c-item__position {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-item__position {
+    font-size: 10px;
+  }
+}
+
+.c-item__txt {
+  line-height: 1.625;
+}
+
+@media screen and (max-width: 768px) {
+  .c-item__txt {
+    font-size: 14px;
+  }
 }
