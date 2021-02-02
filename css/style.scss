@@ -331,9 +331,6 @@ header
     align-self:stretch;
     margin-bottom: 25px;
 }
-.index-news-item-first{
-
-}
 .index-news-link{
     @include hover() ;
     text-decoration: none;
@@ -353,6 +350,7 @@ header
     padding:0 25px 25px 15px;
     height: 100%;
 }
+
 .index-news-time{
     font-size: $fz-sx;
 }
@@ -447,19 +445,19 @@ header
 /*====================================================================
                     comments
 ====================================================================*/
-.index-comments{
+.comments{
     padding: 60px 0 ;
     .section-title{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 }
-.index-comments-title-sub{
+.comments-title-sub{
     margin-bottom: 30px;
     text-align: center;
     font-size: 24px;
     font-weight: $b;
 }
-.index-comments-box{
+.comments-box{
     width: 100%;
     padding: 50px 30px;
     color: $c-white;
@@ -469,7 +467,7 @@ header
     background-position:center;
     margin-bottom: 70px;
 }
-.index-comments-box-title{
+.comments-box-title{
     font-size: 20px;
     font-size: $b;
     margin-bottom: 10px;
@@ -477,7 +475,7 @@ header
         font-size: 26px;
     }
 }
-.index-comments-text{
+.comments-text{
     font-size: $fz-s;
     width: 420px;
 }
@@ -582,8 +580,6 @@ header
             font-size: $fz-base;
             
         }
-    }
-    tr{
     }
 }
 .index-schedule-date{
@@ -1041,5 +1037,4 @@ footer{
     background-image: url(../img/story3.png);
     background-size:50% ;
     background-repeat: no-repeat;
-
 }

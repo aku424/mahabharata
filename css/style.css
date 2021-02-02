@@ -530,22 +530,22 @@ header
 /*====================================================================
                     comments
 ====================================================================*/
-.index-comments {
+.comments {
   padding: 60px 0;
 }
 
-.index-comments .section-title {
-  margin-bottom: 40px;
+.comments .section-title {
+  margin-bottom: 30px;
 }
 
-.index-comments-title-sub {
+.comments-title-sub {
   margin-bottom: 30px;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
 }
 
-.index-comments-box {
+.comments-box {
   width: 100%;
   padding: 50px 30px;
   color: #fff;
@@ -556,17 +556,17 @@ header
   margin-bottom: 70px;
 }
 
-.index-comments-box-title {
+.comments-box-title {
   font-size: 20px;
   font-size: 600;
   margin-bottom: 10px;
 }
 
-.index-comments-box-title span {
+.comments-box-title span {
   font-size: 26px;
 }
 
-.index-comments-text {
+.comments-text {
   font-size: 14px;
   width: 420px;
 }
