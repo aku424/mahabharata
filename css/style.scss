@@ -331,9 +331,6 @@ header
     align-self:stretch;
     margin-bottom: 25px;
 }
-.index-news-item-first{
-
-}
 .index-news-link{
     @include hover() ;
     text-decoration: none;
@@ -353,6 +350,7 @@ header
     padding:0 25px 25px 15px;
     height: 100%;
 }
+
 .index-news-time{
     font-size: $fz-sx;
 }
@@ -582,8 +580,6 @@ header
             font-size: $fz-base;
             
         }
-    }
-    tr{
     }
 }
 .index-schedule-date{
