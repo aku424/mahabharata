@@ -576,7 +576,7 @@ header
     background-image: url(../img/index-comments.png);
     background-size: 105%;
     background-position:center;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     @include mq(md){
         padding: 30px 20px;
     }
@@ -1368,12 +1368,19 @@ footer{
                     //inguiry
 /*====================================================================
 ====================================================================*/
+.ing{
+    margin-bottom: 60px;
+}
 .ing-area{
     background-color: rgba(255, 255, 255, .3);
     padding: 30px;
 }
 .ing__before{
-
+    // display: none;
+}
+.ing__after{
+    display: none;
+    padding: 0;
 }
 .ing-section-title{
     margin-top: 0;
@@ -1427,7 +1434,10 @@ footer{
 .contact_sub{
     margin: 30px auto 0 auto;
     display: block;
-    @include btn(200px,60px ,$c-btn__r ,$fz-m ,$c-white )
+    @include btn(200px,60px ,$c-btn__r ,$fz-m ,$c-white );
+    @include mq(sm){
+        @include btn(140px,40px ,$c-btn__r ,$fz-s ,$c-white )
+    }
 }
 .ing__message{
     font-size: $fz-m;

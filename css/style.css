@@ -766,7 +766,7 @@ header
   background-image: url(../img/index-comments.png);
   background-size: 105%;
   background-position: center;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 @media screen and (max-width: 900px) {
@@ -1874,9 +1874,18 @@ footer {
 ====================================================================*/
 /*====================================================================
 ====================================================================*/
+.ing {
+  margin-bottom: 60px;
+}
+
 .ing-area {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 30px;
+}
+
+.ing__after {
+  display: none;
+  padding: 0;
 }
 
 .ing-section-title {
@@ -1963,6 +1972,23 @@ footer {
 .contact_sub:hover {
   transition: .3s;
   opacity: .8;
+}
+
+@media screen and (max-width: 768px) {
+  .contact_sub {
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #c63205;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+  .contact_sub:hover {
+    transition: .3s;
+    opacity: .8;
+  }
 }
 
 .ing__message {
