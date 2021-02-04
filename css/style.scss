@@ -86,9 +86,11 @@ body{
 img{
     width: 100%;
 }
+
 .inner{
     max-width: 810px;
     margin: 0 auto;
+    box-sizing: content-box;
     @include mq(md){
         max-width: 720px;
     }
@@ -115,14 +117,8 @@ img{
 }
 .util-top-inner{
     display: flex;
-    max-width: 810px;
-    margin: 0 auto;
-    padding: 58px 0;
-    @include mq(md){
-        max-width: 720px;
-    }
+    padding: 58px 15px;
     @include mq(sm){
-        
         display: block;
         text-align: center;
     }
@@ -132,7 +128,6 @@ img{
     @include mq(sm){
         margin-right: 0;
         width: 100%;
-        padding: 0 15px;
         display: inline-block;
         margin-bottom: 24px;
     }
@@ -148,6 +143,7 @@ img{
 }
 .util-btn-box{
     position: absolute;
+    box-sizing: border-box;
     transform: translate(-50%, -50%);
     max-width: 810px;
     left: 50%;
@@ -172,18 +168,30 @@ img{
 header
 ====================================================================*/
 .header{
-    height: 90px;
     width: 100%;
+    @include mq(sm){
+        white-space: nowrap;
+        overflow-y:scroll;
+    }
 }
 .header-nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 25px 0;
-    overflow: auto
+    max-width: 660px;
+    margin: 0 auto;
+    flex: 1 1 100%;
+    @include mq(sm){
+        width: 510px;
+        padding: 12px 0;
+        flex: 0 0 100%;
+        
+    }
+
 }
 .header-item{
     &+&{
-        margin-left: 30px;
+        // margin-left: 30px;
     }
 }
 .header-link{
@@ -194,12 +202,17 @@ header
     font-size: $fz-sx;
     color: #421F15;
     font-weight: $b;
-    
+    @include mq(sm){
+        font-size: 10px;
+    }
 }
 .header-item-main{
     color: #421F15;
     font-weight: $b;
     font-size: $fz-l;
+    @include mq(sm){
+        font-size:$fz-base ;
+    }
 }
 /*====================================================================
                     main
@@ -210,25 +223,38 @@ header
 /*====================================================================
                     top
 ====================================================================*/
-.index-top{
+.i-top{
     width: 100%;
-    height: 520px;
     background-image: url(../img/top.png);
     background-position: 85% 60%;
     background-size: 170%;
     color: $c-white;
     padding: 60px 0px;
     position: relative;
-}
-.index-top-inner{
-    max-width: 1100px;
-    margin: 0 auto;
-    @include mq(xl){
-        max-width: 890px;
+    @include mq(sm){
+        padding: 30px 0;
     }
 }
+.t-btn__box{
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    left:50%;
+    bottom:0;
+    text-align: right;
+    .to-reserve{
+        margin-left: auto;
+        display: block;
+        @include btn(200px,60px ,$c-btn__r ,$fz-s ,$c-white );
+        text-decoration:none;
+        @include mq(sm){
+            @include btn(150px,40px ,$c-btn__r ,$fz-sx ,$c-white );
+        }
+    }
+}
+
 .index-top-title-box{
-    font-family:$ff-title ;
+    width: 100%;
 }
 .index-top-title-sub{
     font-size: $fz-xl;
@@ -236,51 +262,47 @@ header
 .index-top-title{
     font-size: 90px;
 }
-.index-top-contents{
+.i-top__contents{
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    @include mq(sm){
+        display: block;
+        margin-top: 0;
+    }
 }
-.index-top-contents-info{
+.i-top__contents__info{
     width: 370px;
+    @include mq(sm){
+        max-width: 330px;
+        width: 70%;
+        margin: 24px auto;
+    }
 }
-.index-top-contents-text{
+.i-top-contents__text{
     flex: 0 0 340px;
     font-size: $fz-s;
     span{
         font-weight: $b;
     }
-}
-.top-btn-box{
-    max-width: 1100px;
-    width: 100%;
-    position: absolute;
-    transform: translate(-50%, 50%);
-    left:50%;
-    bottom:0;
-    text-align: right;
-    @include mq(xl){
-        max-width: 890px;
-    }
-    .btn{
-        margin-left: auto;
-        display: block;
-        @include btn(200px,60px ,$c-btn__r ,$fz-s ,$c-white );
-        text-decoration:none;
+    @include mq(sm){
+        font-size: $fz-sx;
     }
 }
 /*====================================================================
                     intro
 ====================================================================*/
-.index-news{
+.i-news{
     padding: 60px 0;
 }
-.index-intro-box{
-    height: 350px;
+.i-intro-box{
     padding: 25px;
     background-color:rgba(255, 255, 255, .3);
     position: relative;
+    @include mq(sm){
+        padding: 15px;
+    }
     &::after{
         content: "";
         position: absolute;
@@ -293,21 +315,31 @@ header
         background-position:50% 70%;
         background-size: 140%;
         clip-path: polygon(0 0, 0% 100%, 100% 0);
+        @include mq(sm){
+            width: 100px;
+            height: 100px;
+        }
     }
 }
-.index-intro-title{
+.i-intro__sub{
+    text-align: center;
+}
+.i-intro-title{
     text-align: center;
     font-size: $fz-xl;
     font-weight: $b;
 }
-.index-intro-text-box{
+.i-intro-text-box{
     display: flex;
     justify-content: space-between;
     font-size: $fz-sx;
     margin-top: 15px;
+    @include mq(sm){
+        display: block;
+    }
 }
-.index-intro-text-left{
-    width: 360px;
+.i-intro-text-left, .i-intro-text-right{
+    flex: 0 0 360px;
     line-height: 1.75;
 }
 /*====================================================================
@@ -319,78 +351,130 @@ header
     align-items: center;
     justify-content: center;
     position: relative;
+    @include mq(sm){
+        margin: 20px 0 ;
+    }
 }
 .to-news{
     position: absolute;
     right: 0;
-    @include btn(120px,40px ,$c-btn__r ,$fz-s ,$c-white )
+    @include btn(120px,40px ,$c-btn__r ,$fz-s ,$c-white );
+    @include mq(sm){
+        @include btn(100px,30px ,$c-btn__r ,$fz-sx ,$c-white );
+    }
 }
-.index-news-first-box{
+.i-news-first-box{
     display: flex;
     justify-content: space-between;
     align-self:stretch;
     margin-bottom: 25px;
+    @include mq(sm){
+        margin-bottom: 0;
+        display: block;
+    }
 }
-.index-news-link{
+.i-news-link{
     @include hover() ;
     text-decoration: none;
     display: block;
-    color: $c-base;
-}
-.index-news-item-first{
-    width: 250px;
-    background-color: $c-white;
-    img{
-        width: 100%;
-        height: 140px;
-        overflow: hidden;
+    @include mq(sm){
+        figure{
+            width: 100%;
+            padding-top: 56%;
+            position: relative;
+            overflow: hidden;
+            img{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                transform: translateY( -50%);
+            }
+        }
     }
 }
-.index-news-item-first-text-box{
+.i-news-item-first{
+    width: 250px;
+    background-color: $c-white;
+    @include mq(sm){
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+}
+.i-news-item-first-text-box{
+    color: $c-base;
     padding:0 25px 25px 15px;
     height: 100%;
+    @include mq(sm){
+        padding: 0 15px 15px 10px;
+    }
 }
 
-.index-news-time{
-    font-size: $fz-sx;
+.i-news-item{
+    @include mq(sm){
+        margin-bottom: 24px;
+    }
 }
-.index-news-item-title{
+.i-news-time{
+    @include mq(sm){
+        font-size: $fz-sx;
+    }
+}
+.i-news-item-title{
     font-weight: $b;
+    @include mq(sm){
+        font-size:$fz-s ;
+    }
 }
-.index-news-second-box{
+.i-news-second__box{
     display: flex;
     justify-content: space-between;
+    @include mq(sm){
+        display: block;
+    }
 }
-.index-news-item-second{
+.i-news-item-second{
     height: 90px;
     background-color: $c-white;
     flex: 0 0 380px;
+    @include mq(sm){
+        height: 100%;
+    }
 }
 .second{
     display: flex;
     height: 100%;
     align-self: stretch;
+    @include mq(sm){
+        display: block;
+    }
     img{
         width: 150px;
         height: 100%;
+        @include mq(sm){
+            width: 100%;
+
+        }
     }
 }
-.index-news-item-second-text-box{
+.i-news-item-second-text-box{
     padding: 5px 15px 10px 15px;
+    color: $c-base;
     time{
         margin-bottom: 0;
     }
-    .index-news-item-title{
+    .i-news-item-title{
         margin-top: 0;
     }
 }
 /*====================================================================
                     story
 ====================================================================*/
-.index-story{
+.i-story{
     width: 100%;
     height: 440px;
     background-color: #000;
+    
         .section-title{
             z-index: 10;
             color: $c-white;
@@ -399,15 +483,20 @@ header
             left: 50%;
         }
     }
-    .index-story-second{
-        height: 440px;
+    .i-story__second{
+        height: 100%;
         padding: 30px;
         background-image: url(../img/story2.png) ;
         // background: linear-gradient(to right,transparent, #000);
         position: relative;
         background-position: -30% 30%;
-        background-size: 70%;
+        background-size:70%;
         background-repeat: no-repeat;
+        @include mq(md){
+            background-size:cover;
+            background-position: -30px 50%;
+            padding: 15px;
+        }
         &::after{
             position: absolute;
             content: '';
@@ -433,13 +522,22 @@ header
     color: $c-white;
     line-height: 1.75;
     font-weight: 300;
+    @include mq(sm){
+        position: none;
+        transform: translateX(-50%);
+        left: 50%;
+        width: 100%;
+    }
 }
 .to-story{
     z-index: 10;
     position: absolute; 
     bottom: 0;
     right: 0;
-    @include btn(115px,36px ,$c-btn__r ,$fz-s ,$c-white )
+    @include btn(115px,36px ,$c-btn__r ,$fz-s ,$c-white );
+    @include mq(sm){
+        @include btn(100px,30px ,$c-btn__r ,$fz-s ,$c-white );
+    }
     
 }
 /*====================================================================
@@ -447,9 +545,13 @@ header
 ====================================================================*/
 .comments{
     padding: 60px 0 ;
+    @include mq(sm){
+        padding: 30px 0;
+    }
     .section-title{
         margin-bottom: 30px;
     }
+
 }
 .comments-title-sub{
     margin-bottom: 30px;
@@ -466,7 +568,42 @@ header
     background-size: 105%;
     background-position:center;
     margin-bottom: 70px;
+    @include mq(md){
+        padding: 30px 20px;
+    }
+    @include mq(sm){
+        display: none;
+    }
 }
+.comment__res{
+    display: none;
+    @include mq(sm){
+        display: block;
+    }
+    .comment__res-img{
+        background-image: url(../img/index-comments.png);
+        background-size: cover;
+        background-position:center;
+        padding-top: 60%;
+    }
+    .comment__res__txtarea{
+        background-color: #161616;
+        padding: 15px;
+        color: $c-white;
+        margin-bottom: 20px;
+    }
+    .comment__res__title{
+        font-size: $fz-m;
+        margin-bottom: 10px;
+        span{
+            font-size: 20px;
+        }
+    }
+    .comments__res_txt{
+        font-size: $fz-s;
+    }
+}
+
 .comments-box-title{
     font-size: 20px;
     font-size: $b;
@@ -489,12 +626,15 @@ header
                     casts
 ====================================================================*/
 .section-ca-title{
-        margin-bottom: 150px !important;
+        margin-bottom: 100px !important;
 }
 .cas{
     background-color: #FFFFFFE6;
     padding-top: 680px;
     position: relative;
+    @include mq(sm){
+        padding-top: 1745px;
+    }
     .inner{
         width: 100%;
         position: absolute;
@@ -502,6 +642,9 @@ header
         transform: translateX( -50%);
         left: 50%;
         padding-bottom: 30px;
+        box-sizing: border-box;
+        @include mq(sm){
+        }
     }
 }
 .cas-items{
@@ -509,20 +652,39 @@ header
     justify-content: space-between;
     justify-self: stretch;
     margin-bottom: 20px;
+    @include mq(sm){
+        justify-content: none;
+        justify-self: none;
+        display: block;
+    }
 }
 .ca-item{
     flex :0 0 250px;
+    @include mq(sm){
+        width: 100%;
+        margin-bottom: 24px;
+    }
 }
 .ca-item-img{
     margin-bottom: 20px;
+    @include mq(sm){
+        text-align: center;
+    }
     img{
         border-radius: 50%;
         text-align: center;
+        @include mq(sm){
+            width: 200px;
+            height: 200px;
+        }
     }
 }
 .ca-prof{
     text-align: center;
     margin-bottom: 15px;
+    @include mq(sm){
+        margin-bottom: 10px;
+    }
 }
 .ca-position{
     margin-bottom: 5px;
@@ -531,6 +693,9 @@ header
     margin-bottom: 15px;
     font-size:18px ;
     font-weight: $b;
+    @include mq(sm){
+        margin-bottom: 10px;
+    }
 }
 .ca-title{
     font-size: $fz-sx;
@@ -1188,4 +1353,76 @@ footer{
     @include mq(sm){
         flex: 0 0 150px;
     }
+}
+/*====================================================================
+====================================================================*/
+                    //inguiry
+/*====================================================================
+====================================================================*/
+.ing-area{
+    background-color: rgba(255, 255, 255, .3);
+    padding: 30px;
+}
+.ing__before{
+
+}
+.ing-txt__top{
+    margin-bottom: 15px;
+    @include mq(sm){
+        margin-bottom: 10px;
+    }
+}
+.ing-txt__top,.ing-title{
+    font-size: $fz-m;
+    line-height: 1.6667;
+    font-weight: $b;
+    @include mq(sm){
+        font-size: $fz-s;
+    }
+}
+.contact-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    @include mq(sm){
+        display: block;
+        border-bottom: 10px;
+    }
+}
+.ing__input, .ing__txt{
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, .7);
+    width: 510px;
+    height: 45px;
+    margin-left: 15px;
+    @include mq(sm){
+        width: 100%;
+        margin: 0;
+        height: 30px;
+    }
+    &:focus{
+        border: 3px solid rgba(240,196,4,1);
+        box-shadow: none;
+        outline: none;
+    } 
+}
+.ing__txt{
+    resize: none;
+    height: 165px;
+    height: 120px;
+}
+.contact_sub{
+    margin: 30px auto 0 auto;
+    display: block;
+    @include btn(200px,60px ,$c-btn__r ,$fz-m ,$c-white )
+}
+.ing__message{
+    font-size: $fz-m;
+    font-weight: $b;
+    text-align: center;
+    line-height: 1.66667;
+}
+.contact-news{
+    margin: 0 0 30px 0;
 }
