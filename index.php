@@ -1,81 +1,12 @@
-<!DOCTYPE html>
-<html lang="jp">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マハーバーラタ</title>
-    <meta name="description" content="マハーバーラタのイベントの詳細情報">
-    <!-- font-family -->
-    <!-- drawer.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" media="screen and (max-width :767px)">
-    <!-- drawer.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-    <!-- fontawesome -->
-    <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-    <!-- favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- wow.js -->
-    <script src="./js/wow.js"></script>
-    <!-- script.js -->
-    <script src="./js/script.js"></script>
-    <!-- animate.css -->
-    <link rel="stylesheet" href="./css/animate.css">
-    <!-- main.css -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <!--header -->
-    <header class="header">
-        <ul class="header-nav">
-            <li class="header-item">
-                <a href="" class="header-link">
-                    <p class="header-item-sub">トップ</p>
-                    <p class="header-item-main">TOP</p>
-                </a>
-            </li>
-            <li class="header-item">
-                <a href="" class="header-link">
-                    <p class="header-item-sub">ニュース</p>
-                    <p class="header-item-main">NEWS</p>
-                </a>
-            </li>
-            <li class="header-item">
-                <a href="" class="header-link">
-                    <p class="header-item-sub">ストーリー</p>
-                    <p class="header-item-main">STORY</p>
-                </a>
-            </li>
-            <li class="header-item">
-                <a href="" class="header-link">
-                    <p class="header-item-sub">ストーリー</p>
-                    <p class="header-item-main">COMMENTS</p>
-                </a>
-            </li>
-            <li class="header-item">
-                <a href="" class="header-link">
-                    <p class="header-item-sub">キャスト</p>
-                    <p class="header-item-main">CAST</p>
-                </a>
-            </li>
-            <li class="header-item">
-                <a href="" class="header-link">
-                    <p class="header-item-sub">問い合わせ</p>
-                    <p class="header-item-main">INQUIRY</p>
-                </a>
-            </li>
-        </ul>
-    </header>
-    <!-- header -->
+<?php get_header()?>
     <!-- top -->
     <section class="i-top">
         <div class="inner">
             <div class="it-op-title-box">
-                <img src="./img/title.png" alt="世界最長の叙事詩をピーター・ブルック以来の全編舞台化。完全版マハーバーラタ">
+                <img src="<?php echo get_template_directory_uri()?>/img/title.png" alt="世界最長の叙事詩をピーター・ブルック以来の全編舞台化。完全版マハーバーラタ">
             </div>
             <div class="i-top__contents">
-                    <img class="i-top__contents__info" src="./img/schedule.png" alt="2020年7月4日〜7日なかのZERO大ホール">
+                    <img class="i-top__contents__info" src="<?php echo get_template_directory_uri()?>/img/schedule.png" alt="2020年7月4日〜7日なかのZERO大ホール">
                 <p class="i-top-contents__text">
                     小池博史ブリッジプロジェクトが2013年から2020年までの8カ年計画で臨む、インド古代叙事詩「マハーバーラタ」の全編舞台作品化計画。いよいよその集大成である<span>完全版マハーバーラタ</span>の公演が決定！！<br>
                     アジア各国のアーティストらが共同で取り組み、発展を遂げる本事業はアジア、そして世界へ向けてビッグウェーブを起こす。タイと日本から世界へと発信する本作。どうぞお見逃しなく！
@@ -119,7 +50,7 @@
                             <article class="i-news-item i-news-item-first">
                                 <a href="" class="i-news-link">
                                     <figure>
-                                        <img src="./img/news1.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri()?>/img/news1.png" alt="">
                                     </figure>
                                     <div class="i-news-item-first-text-box">
                                         <time class="i-news-time" datetime="">2019.9.30</time>
@@ -130,7 +61,7 @@
                             <article class="i-news-item i-news-item-first">
                                 <a href="" class="i-news-link">
                                     <figure>
-                                        <img src="./img/news2.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri()?>/img/news2.png" alt="">
                                     </figure>
                                     <div class="i-news-item-first-text-box">
                                         <time class="i-news-time" datetime="">2019.9.30</time>
@@ -141,7 +72,7 @@
                             <article class="i-news-item i-news-item-first">
                                 <a href="" class="i-news-link">
                                     <figure>
-                                        <img src="./img/news3.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri()?>/img/news3.png" alt="">
                                     </figure>
                                     <div class="i-news-item-first-text-box">
                                         <time class="i-news-time" datetime="">2019.9.30</time>
@@ -154,7 +85,7 @@
                             <article class="i-news-item i-news-item-second">
                                 <a href="" class="i-news-link second">
                                     <figure>
-                                        <img src="./img/news2.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri()?>/img/news2.png" alt="">
                                     </figure>
                                     <div class="i-news-item-second-text-box">
                                         <time class="i-news-time" datetime="">2019.9.30</time>
@@ -165,7 +96,7 @@
                             <article class="i-news-item i-news-item-second">
                                 <a href="" class="i-news-link second">
                                     <figure>
-                                        <img src="./img/news2.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri()?>/img/news2.png" alt="">
                                     </figure>
                                     <div class="i-news-item-second-text-box">
                                         <time class="i-news-time" datetime="">2019.9.30</time>
@@ -227,7 +158,7 @@
                     <ul class="cas-items">
                         <li class="ca-item">
                             <div class="ca-item-img">
-                                <img src="./img/cast1.png" alt="">
+                                <img src="<?php echo get_template_directory_uri()?>/img/cast1.png" alt="">
                             </div>
                             <div class="ca-prof">
                                 <p class="ca-position">作・演出・振付・構成</p>
@@ -245,7 +176,7 @@
                         </li>
                         <li class="ca-item">
                             <div class="ca-item-img">
-                                <img src="./img/cast2.png" alt="">
+                                <img src="<?php echo get_template_directory_uri()?>/img/cast2.png" alt="">
                             </div>
                             <div class="ca-prof">
                                 <p class="ca-position">出演</p>
@@ -267,7 +198,7 @@
                         </li>
                         <li class="ca-item">
                             <div class="ca-item-img">
-                                <img src="./img/cast3.png" alt="">
+                                <img src="<?php echo get_template_directory_uri()?>/img/cast3.png" alt="">
                             </div>
                             <div class="ca-prof">
                                 <p class="ca-position">出演</p>
@@ -287,67 +218,4 @@
                 </div>
             </section>
             <!-- casts -->
-            <!-- schedule -->
-        <div class="inner">
-            <section class="index-schedule">
-                <div class="index-schedule-box">
-                    <h2 class="section-title">SCHEDULE</h2>
-                    <table class="index-schedule-table">
-                        <tbody>
-                            <tr>
-                                <td class="index-schedule-date">2020.07.04</td>
-                                <td class="index-schedule-time">17:00開演</td>
-                                <td class="index-schedule-place">中野ZERO大ホール</td>
-                                <td class="index-schedule-reserve">
-                                    <a href="#">
-                                        チケット予約受付中
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="index-schedule-date">2020.07.04</td>
-                                <td class="index-schedule-time">17:00開演</td>
-                                <td class="index-schedule-place">中野ZERO大ホール</td>
-                                <td class="index-schedule-reserve">
-                                    <a href="#">
-                                        チケット予約受付中
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="index-schedule-date">2020.07.04</td>
-                                <td class="index-schedule-time">17:00開演</td>
-                                <td class="index-schedule-place">中野ZERO大ホール</td>
-                                <td class="index-schedule-reserve">
-                                    <a href="#">
-                                        チケット予約受付中
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="index-schedule-date">2020.07.04</td>
-                                <td class="index-schedule-time">17:00開演</td>
-                                <td class="index-schedule-place">中野ZERO大ホール</td>
-                                <td class="index-schedule-reserve">
-                                    <a href="#">
-                                        チケット予約受付中
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="schedule-btn-box">
-                    <a href="" class="btn to-contact">お問い合わせはこちら</a>
-                    <a href="" class="btn to-reserve">チケット予約サイトへ</a>
-                </div>
-            </section>
-            <!-- schedule -->
-        </div>
-    </main>
-    <!-- main -->
-    <footer>
-        <p class="copy-right-text">Copyright © 2019 完全版マハーバーラタ All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+<?php get_footer()?>

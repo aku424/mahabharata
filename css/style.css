@@ -1,4 +1,36 @@
 @charset "UTF-8";
+/*================================================================
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, figure, article, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+
 @media screen and (max-width: 900px) {
   .is-sp {
     display: none;
@@ -181,7 +213,7 @@ header
 .header-nav {
   display: flex;
   justify-content: space-around;
-  padding: 25px 0;
+  padding: 20px 0;
   max-width: 660px;
   margin: 0 auto;
   flex: 1 1 100%;
@@ -238,6 +270,14 @@ header
   color: #fff;
   padding: 60px 0px;
   position: relative;
+}
+
+@media screen and (min-width: 1201px) {
+  .i-top .inner {
+    max-width: 920px;
+    margin: 0 auto;
+    box-sizing: content-box;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -314,6 +354,7 @@ header
   .i-top__contents {
     display: block;
     margin-top: 0;
+    text-align: center;
   }
 }
 
@@ -325,7 +366,7 @@ header
   .i-top__contents__info {
     max-width: 330px;
     width: 70%;
-    margin: 24px auto;
+    margin: 24px 0;
   }
 }
 
