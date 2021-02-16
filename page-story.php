@@ -21,7 +21,9 @@
                 </section>
                 <div class="inner">
                     <div class="na-pans">
-                        <p>ホーム > news</p>
+                        <?php if(function_exists(bcn_display())):?>
+                            <?php bcn_display(); ?>
+                        <?php endif?>
                     </div>
                 </div>
                 <section class="story-area">

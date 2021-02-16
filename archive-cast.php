@@ -6,9 +6,11 @@
     <main class="ca-main cast-main">
         <div class="ca-title-area ca-inner">
             <div class="inner">
-                <div class="na-pans">
-                    <p>ホーム > キャスト</p>
-                </div>
+            <div class="na-pans">
+                <?php if(function_exists(bcn_display())):?>
+                    <?php bcn_display(); ?>
+                <?php endif?>
+            </div>
                 <h2 class="section-title">CAST</h2>
             </div>
         </div>

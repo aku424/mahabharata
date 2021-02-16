@@ -5,8 +5,10 @@
     <!-- main -->
     <main class="c-main">
         <div class="inner">
-            <div class="na-pans">
-                <p>ホーム > news > 「完全版マハーバーラタ」2020年7月・東京公演！！</p>
+        <div class="na-pans">
+                <?php if(function_exists(bcn_display())):?>
+                    <?php bcn_display(); ?>
+                <?php endif?>
             </div>
         </div>
         <section class="comments">
@@ -20,128 +22,21 @@
                         まずこの聖句が浮かんだ。境界線に立つ人類。超越する意志。小池博史氏の心象が生み出したアバターが乱舞しながら深層意識に波紋を起こしてゆく。
                     </p>
                 </div>
-                <div class="c-items">
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                    <article class="c-item">
-                        <div class="c-item__title">
-                            <h4 class="c-item__name">今福龍太</h4>
-                            <p class="c-item__position">文化人類学者</p>
-                        </div>
-                        <p class="c-item__txt">
-                            蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>
-                            吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-                        </p>
-                    </article>
-                </div>
+                <?php if(have_posts()):?>
+                    <div class="c-items">
+                        <?php while (have_posts()):the_post()?>
+                            <article class="c-item">
+                                <div class="c-item__title">
+                                    <h4 class="c-item__name"><?php the_field('name')?></h4>
+                                    <p class="c-item__position"><?php the_field('title')?></p>
+                                </div>
+                                <p class="c-item__txt">
+                                <?php the_field('text')?>
+                                </p>
+                            </article>
+                        <?php endwhile;?>
+                    </div>
+                <?php endif;?>
             </div>
         </section>
-<?php get_footer()?>
+        <?php get_footer()?>

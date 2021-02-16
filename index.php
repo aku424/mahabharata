@@ -15,7 +15,7 @@
         </div>
         <div class="t-btn__box">
             <div class="inner">
-                <a href="#" class=" to-reserve">チケット予約サイトへ</a>
+                <a href="<?php echo esc_url( home_url( '/inquiry' ) ); ?>" class=" to-reserve">チケット予約サイトへ</a>
             </div>
         </div>
     </section>
@@ -43,70 +43,31 @@
                     </div>
                     <div class="news-btn-box">
                         <h2 class="section-title i-news-title">NEWS</h2>
-                        <a href="" class="btn to-news">ニュース一覧へ</a>
+                        <a href="<?php echo esc_url( home_url( '/news' ) ); ?>" class="btn to-news">ニュース一覧へ</a>
                     </div>
+                    <?php
+                        $news = new WP_Query( array(
+                                'post_type' => 'news',
+                                'posts_per_page' => 5
+                            )
+                        );
+                        if (have_posts()):?>
                     <div class="i-news-box">
-                        <div class="i-news-first-box">
-                            <article class="i-news-item i-news-item-first">
-                                <a href="" class="i-news-link">
-                                    <figure>
-                                        <img src="<?php echo get_template_directory_uri()?>/img/news1.png" alt="">
-                                    </figure>
-                                    <div class="i-news-item-first-text-box">
-                                        <time class="i-news-time" datetime="">2019.9.30</time>
-                                        <h4 class="i-news-item-title">「完全版マハーバーラタ」2020年7月・東京公演！！</h4>
-                                    </div>
-                                </a>
-                            </article>
-                            <article class="i-news-item i-news-item-first">
-                                <a href="" class="i-news-link">
-                                    <figure>
-                                        <img src="<?php echo get_template_directory_uri()?>/img/news2.png" alt="">
-                                    </figure>
-                                    <div class="i-news-item-first-text-box">
-                                        <time class="i-news-time" datetime="">2019.9.30</time>
-                                        <h4 class="i-news-item-title">ニュースのタイトルが入ります。ニュースのタイトルが入ります。</h4>
-                                    </div>
-                                </a>
-                            </article>
-                            <article class="i-news-item i-news-item-first">
-                                <a href="" class="i-news-link">
-                                    <figure>
-                                        <img src="<?php echo get_template_directory_uri()?>/img/news3.png" alt="">
-                                    </figure>
-                                    <div class="i-news-item-first-text-box">
-                                        <time class="i-news-time" datetime="">2019.9.30</time>
-                                        <h4 class="i-news-item-title">ニュースのタイトルが入ります。ニュースのタイトルが入ります。</h4>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        <div class="i-news-second__box">
-                            <article class="i-news-item i-news-item-second">
-                                <a href="" class="i-news-link second">
-                                    <figure>
-                                        <img src="<?php echo get_template_directory_uri()?>/img/news2.png" alt="">
-                                    </figure>
-                                    <div class="i-news-item-second-text-box">
-                                        <time class="i-news-time" datetime="">2019.9.30</time>
-                                        <h4 class="i-news-item-title">ニュースのタイトルが入ります。</h4>
-                                    </div>
-                                </a>
-                            </article>
-                            <article class="i-news-item i-news-item-second">
-                                <a href="" class="i-news-link second">
-                                    <figure>
-                                        <img src="<?php echo get_template_directory_uri()?>/img/news2.png" alt="">
-                                    </figure>
-                                    <div class="i-news-item-second-text-box">
-                                        <time class="i-news-time" datetime="">2019.9.30</time>
-                                        <h4 class="i-news-item-title">ニュースのタイトルが入ります。</h4>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        
+                    <?php while ( $news->have_posts() ) : $news->the_post();?>
+                        <article class="i-news-item i-news-item-first">
+                            <a href="<?php the_permalink()?>" class="i-news-link">
+                                <figure>
+                                    <img src="<?php echo the_field('img')?>" alt="">
+                                </figure>
+                                <div class="i-news-text__box">
+                                    <time class="i-news-time" datetime="<?php the_time('Y/m/d')?>"><?php the_time('Y/m/d')?></time>
+                                    <h4 class="i-news-item-title"><?php echo the_title();?></h4>
+                                </div>
+                            </a>
+                        </article>
+                        <?php endwhile;?>
                     </div>
+                <?php endif;?> 
             </section>
         </div>    
         <!-- news -->
@@ -119,7 +80,7 @@
                         マハー（偉大な）、バーラタ（バラタ族）、つまり「偉大なバラタ族」の物語。神々が人間界を作り出すところから始まり、バラタ族の中のクル家とパーンドゥ家という二つの部族間の対立を巡るストーリー。神の血を引く個性豊かな登場人物たちによる差別、対立、欲望、嫉妬など、生の苦しみが描かれ、最終的には一族が破滅していく。<br> 
                         世界的な文学作品古代ギリシャの「イーリアス」「オデュッセイア」と並ぶ世界三大叙事詩の一つに数えられており、「ラーマーヤナ」と双璧を成すインド二大叙事詩の一つ。原語はサンスクリット語であるが、全18巻、10万詩節を超えるその長さは聖書の約4倍と言われ、原典の日本語訳はいまだ完結していない。
                     </p>
-                    <a href="" class="btn to-story">もっと詳しく</a>
+                    <a href="<?php echo esc_url( home_url( '/story' ) ); ?>" class="btn to-story">もっと詳しく</a>
                 </div>
             </div>
         </section>
@@ -135,7 +96,7 @@
                             「文に非ず、其の義に非ず、唯だ一部の意のみ。」<br> 
                             まずこの聖句が浮かんだ。境界線に立つ人類。超越する意志。小池博史氏の心象が生み出したアバターが乱舞しながら深層意識に波紋を起こしてゆく。
                         </p>
-                        <a href="" class="btn to-comments">もっと見る</a>
+                        <a href="<?php echo esc_url( home_url( '/comments' ) ); ?>" class="btn to-comments">もっと見る</a>
                     </div>
                     <article class="comment__res">
                         <div class="comment__res-img"></div>
@@ -156,65 +117,32 @@
             <section class="cas">
                 <div class="inner">
                     <ul class="cas-items">
-                        <li class="ca-item">
-                            <div class="ca-item-img">
-                                <img src="<?php echo get_template_directory_uri()?>/img/cast1.png" alt="">
-                            </div>
-                            <div class="ca-prof">
-                                <p class="ca-position">作・演出・振付・構成</p>
-                                <p class="ca-name">小池博史</p>
-                                <p class="ca-title">　</p>
-                            </div>
-                            <div class="ca-text">
-                                茨城県日立市出身。一橋大学卒業。<br>
-                                演出家・作家・振付家・舞台美術家・写真家、舞台芸術の学校（P.A.I.）校長。<br>
-                                1982年「パパ・タラフマラ」設立。<br>
-                                演劇、舞踊、オペラ、美術、建築等、ジャンルを縦横に渡りながら空間を築き上げてゆく手法で、国際的に高い評価を確立。<br>
-                                3.11を受けて、翌2012年5月にパパ・タラフマラ解散。すぐに「小池博史ブリッジプロジェクト」を立ち上げ、作品を創作しながら、若手表現者の育成と芸術文化事業のプロデュースを手掛けるなど、活動は多岐に渡る。<br>
-                                著書に「ロンググッドバイ～パパ・タラフマラとその時代」（青幻舎刊）、「からだのこえをきく」（新潮社刊）等。
-                            </div>
-                        </li>
-                        <li class="ca-item">
-                            <div class="ca-item-img">
-                                <img src="<?php echo get_template_directory_uri()?>/img/cast2.png" alt="">
-                            </div>
-                            <div class="ca-prof">
-                                <p class="ca-position">出演</p>
-                                <p class="ca-name">白井さち子</p>
-                                <p class="ca-title">(バレエ、コンテンポラリーダンス)</p>
-                            </div>
-                            <div class="ca-text">
-                                7歳よりクラシックバレエを始める。<br>
-                                82年より6年間橘バレエ学校に在籍。<br>
-                                牧阿佐美に師事。<br>
-                                日本女子体育短期大学舞踊コース卒。<br>
-                                在籍中、太田順造にパントマイムを師事。<br>
-                                89年よりパパ・タラフマラに参加。<br>
-                                以降国内外の公演に出演。<br>
-                                後身のパフォーマーのダンス指導にもあっている。<br>
-                                パパ・タラフマラ作品「シンデレラ」においてシンデレラ役、「三人姉妹」次女役、「パパ・タラフマラの白雪姫」継母役などを好演。<br>
-                                これまで約35カ国での公演に参加、そのパフォーマンスは世界各地で認められ、高く評価
-                            </div>
-                        </li>
-                        <li class="ca-item">
-                            <div class="ca-item-img">
-                                <img src="<?php echo get_template_directory_uri()?>/img/cast3.png" alt="">
-                            </div>
-                            <div class="ca-prof">
-                                <p class="ca-position">出演</p>
-                                <p class="ca-name">小谷野哲郎</p>
-                                <p class="ca-title">(バリ舞踏)</p>
-                            </div>
-                            <div class="ca-text">
-                                東海大学音楽学課程在学中よりサウンドスケープ研究の傍らバリ舞踊を始める。<br>
-                                1995年よりインドネシア政府給費留学生としてインドネシア国立芸術高等学院に留学。<br>
-                                学外でも現代バリ舞踊界最高の舞踊家達に師事し、舞踊技術と同時に精神的哲学的影響も強く受ける。<br>
-                                2006年、Asian Cultural Councilの助成によりアメリカに滞在。<br>
-                                パパ・タラフマラ作品では「ガリバー＆スウィフト」「パンク・ドンキホーテ」「白雪姫」に、小池博史ブリッジプロジェクトでは「注文の多い料理店」「風の又三郎」に出演。
-                            </div>
-                        </li>
+                        <?php
+                            $casts = new WP_Query( array(
+                                    'post_type' => 'cast',
+                                    'posts_per_page' => 3
+                                )
+                            );
+                            if (have_posts()):?>
+                            <?php while ( $casts->have_posts() ) : $casts->the_post();?>
+                                <li class="ca-item">
+                                    <div class="ca-item-img">
+                                        <img src="<?php the_field('img')?>" alt="">
+                                        
+                                    </div>
+                                    <div class="ca-prof">
+                                        <p class="ca-position"><?php the_field('position')?></p>
+                                        <p class="ca-name"><?php the_field('name')?></p>
+                                        <p class="ca-title"><?php the_field('title')?></p>
+                                    </div>
+                                    <div class="ca-text">
+                                        <?php the_field('text')?>
+                                    </div>
+                                </li>
+                            <?php endwhile;?>
+                        <?php endif;?>                        
                     </ul>
-                        <a href="" class="btn to-casts">もっと見る</a>
+                        <a href="<?php echo esc_url( home_url( '/cast' ) ); ?>" class="btn to-casts">もっと見る</a>
                 </div>
             </section>
             <!-- casts -->

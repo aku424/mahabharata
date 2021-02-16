@@ -4,8 +4,10 @@
 <!-- main -->
 <main class="c-main">
         <div class="inner">
-            <div class="na-pans">
-                <p>ホーム > お問い合わせ</p>
+        <div class="na-pans">
+                <?php if(function_exists(bcn_display())):?>
+                    <?php bcn_display(); ?>
+                <?php endif?>
             </div>
         </div>
         <section class="ing">
