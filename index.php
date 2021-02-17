@@ -119,7 +119,7 @@
                     <ul class="cas-items">
                         <?php
                             $casts = new WP_Query( array(
-                                    'post_type' => 'cast',
+                                    'post_type' => 'dev_cast',
                                     'posts_per_page' => 3
                                 )
                             );

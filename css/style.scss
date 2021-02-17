@@ -457,9 +457,7 @@ header
 }
 
 .i-news-time{
-    @include mq(sm){
-        font-size: $fz-sx;
-    }
+    font-size: $fz-sx;
 }
 .i-news-item-title{
     font-weight: $b;
@@ -683,7 +681,7 @@ header
     padding-top: 700px;
     position: relative;
     @include mq(sm){
-        padding-top: 1745px;
+        padding-top: 1600px;
     }
     .inner{
         width: 100%;
@@ -710,6 +708,18 @@ header
 }
 .ca-item{
     flex :0 0 250px;
+    &:nth-child(2){
+        margin:0 30px;
+        @include mq(md){
+            margin:0 20px;
+        }
+        @include mq(sm){
+            margin:0 0 24px 0;
+        }
+    }
+    @include mq(md){
+        flex :0 0 226.6666px;
+    }
     @include mq(sm){
         width: 100%;
         margin-bottom: 24px;
@@ -738,13 +748,16 @@ header
 }
 .ca-position{
     margin-bottom: 5px;
+    @include mq(sm){
+        margin-bottom: 4px;
+    }
 }
 .ca-name{
     margin-bottom: 15px;
     font-size:18px ;
     font-weight: $b;
     @include mq(sm){
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 }
 .ca-title{
@@ -1095,7 +1108,6 @@ footer{
 .na-s-pagination_area{
     .inner{
         display: flex;
-        justify-content: space-between;
     }
 }
 .na-s_pagination_link{
@@ -1104,6 +1116,11 @@ footer{
     display: flex;
     align-items: center;
     max-width: 300px;
+    color: $c-base;
+    text-decoration: none;
+    &:hover{
+        opacity:.7;
+    }
     @include mq(sm){
         margin-top: 15px;
         margin-bottom: 20px;
@@ -1129,6 +1146,7 @@ footer{
     }
 }
 .pagination-pev{
+    margin-right: auto;
     span{
         margin-right: 12px;
         &::after{
@@ -1138,6 +1156,7 @@ footer{
     }
 }
 .pagination-next{
+    margin-left: auto;
     span{
         margin-left: 12px;
         &::after{
@@ -1327,6 +1346,9 @@ footer{
 .cast-main{
     .cas{
         padding-top: 640px;
+        @include mq(sm){
+            padding-top: 1740px;
+        }
     }
 }
 .ca-inner{
@@ -1337,28 +1359,71 @@ footer{
 .ca-sec-area{
     .inner{
         display: flex;
-        justify-content: space-between;
+        
         flex-wrap: wrap;
         padding-top: 60px;
         @include mq(md){
-            justify-content: space-around;
+            
+        }
+        @include mq(sm){
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
     }
 }
 .ca-sec__item{
     flex: 0 0 380px;
     display: flex;
+    align-items: center;
     margin-bottom: 28px;
+    &:nth-child(odd){
+        margin-right: 50px;
+        @include mq(md){
+            margin-right: 20px;
+        }
+        @include mq(sm){
+            margin: 0 auto;
+        }
+    }
     @include mq(md){
-        flex: 0 0 80%;
+        flex: 0 0 350px;
+    }
+    @include mq(sm){
+        display: block;
+        margin-bottom: 24px;
     }
     figure{
         display: block;
-        width: 192px;
+        flex: 0 0 130px;
         height: 130px;
         margin-right: 10px;
+        @include mq(md){
+            flex: 0 0 120px;
+        }
+        @include mq(sm){
+            height: 200px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
         img{
             border-radius: 50%;
+            @include mq(sm){
+                width: 200px;
+                height: 100%;
+            }
+        }
+    }
+}
+.ca-sec__txt-area{
+    flex: 0 0 240px;
+    @include mq(md){
+        flex: 0 0 220px;
+    }
+    @include mq(sm){
+        flex: none;
+        .ca__position,.ca__name,.ca__performance{
+            text-align: center;
         }
     }
 }
@@ -1383,7 +1448,7 @@ footer{
     margin-bottom: 10px;
     @include mq(sm){
         font-size: 10px;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
     }
 }
 .ca__txt{
@@ -1396,22 +1461,26 @@ footer{
     padding-bottom: 5px;
     .inner{
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
         @include mq(md){
-            justify-content: space-around;
         }
     }
 }
 .ca-th__item{
-    flex: 0 0250px;
+    flex: 0 0 240px;
     text-align: center;
     margin-bottom: 30px;
     @include mq(md){
-        flex: 0 0 200px;
+        flex: 0 1 200px;
     }
     @include mq(sm){
-        flex: 0 0 150px;
+        flex: 0 1 150px;
+        &:nth-child(odd){
+            margin-right: auto;
+        }
+        &:nth-child(even){
+            margin-left: auto;
+        }
     }
 }
 /*====================================================================

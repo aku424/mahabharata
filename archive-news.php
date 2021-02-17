@@ -29,12 +29,6 @@
                         <?php endwhile;?>
                     </div>
                 <?php endif;?>
-                <!-- pagination -->
-                <!-- <div class="na-news-pagination__body">
-                    <a href="" class="na-news-pagination na-mun"><p>1</p></a>
-                    <a href="" class="na-news-pagination na-mun"><p>2</p></a>
-                    <a href="" class="na-news-pagination na-next"><p>></p></a>
-                </div> -->
                 <?php if(paginate_links()):?>
                     <div class="na-news-pagination__body">
                         <?php

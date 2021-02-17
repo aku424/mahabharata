@@ -19,7 +19,7 @@
                     <img src="<?php the_field('img')?>" alt="newsのサムネイル画像">
                 </figure>
                 <div class="na-s__title">
-                    <time datetime="2019/9/30">2019.9.30</time>
+                    <time  datetime="<?php the_time('Y/m/d')?>"><?php the_time('Y/m/d')?></time>
                     <h3><?php echo the_title();?></h3>
                 </div>
                 <div class="na-s__body">
@@ -35,20 +35,27 @@
     <!-- pagination -->
     <div class="na-s-pagination_area">
         <div class="inner">
-            <a href="" class="na-s_pagination_link pagination-pev">
-                <span></span>
-                <div class="na-s_pagination_info pagination-info-pev">
-                    <time datetime="2019/9/28 ">2019.9.28 </time>
-                    <p>前のニュース投稿のタイトル前のニュース投稿のタイトル前のニュース投稿のタイトル</p>
-                </div>
-            </a>
-            <a href="" class="na-s_pagination_link pagination-next">
-                <span></span>
-                <div class="na-s_pagination_info pagination-info-next">
-                    <time datetime="2019/9/28 ">2019.9.28</time>
-                    <p>前のニュース投稿のタイトル前のニュース投稿のタイトル前のニュース投稿のタイトル</p>
-                </div>
-            </a>
+            <?php 
+                $pre_post = get_previous_post();
+                $next_post = get_next_post();
+                if ( $pre_post ):?>
+                <a href="<?php echo get_permalink($pre_post ->ID)?>" class="na-s_pagination_link pagination-pev">
+                    <span></span>
+                    <div class="na-s_pagination_info pagination-info-pev">
+                        <time datetime="<?php echo $pre_post->post_date?>"><?php echo $pre_post->post_date?></time>
+                        <p><?php echo $pre_post->post_title; ?></p>
+                    </div>
+                </a>
+            <?php endif; ?>
+            <?php if ($next_post):?>
+                <a href="<?php echo get_permalink($next_post ->ID)?>" class="na-s_pagination_link pagination-next">
+                    <span></span>
+                    <div class="na-s_pagination_info pagination-info-next">
+                    <time datetime="<?php echo $next_post->post_date?>"><?php echo $next_post->post_date?></time>
+                        <p><?php echo $next_post->post_title; ?></p>
+                    </div>
+                </a>
+            <?php endif;?>
         </div>
     </div>
 <?php get_footer()?>
